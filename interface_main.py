@@ -1,7 +1,6 @@
 
 from tkinter import *
 from tkinter import font
-from PIL import Image, ImageTk
 from vending_machine import Vending_Machine
 from decimal import *
 import pygame
