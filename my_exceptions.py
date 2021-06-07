@@ -17,7 +17,7 @@ class WrongValueOfCoinException(Error):
         super().__init__(self.message)
 
     def __str__(self):
-        return "{}".format(self.value, self.message)
+        return "{}".format(self.message)
     
 
 class WrongCurrencyOfCoin(Error):
@@ -33,7 +33,7 @@ class WrongCurrencyOfCoin(Error):
         super().__init__(self.message)
 
     def __str__(self):
-        return "{}".format(self.value, self.message)
+        return "{}".format(self.message)
 
 class ObjectIsNotCoinException(Error):
     """ Exception raised if passed object is not instance of Coin class
@@ -48,7 +48,7 @@ class ObjectIsNotCoinException(Error):
         super().__init__(self.message)
 
     def __str__(self):
-        return "{}".format(self.value, self.message)
+        return "{}".format(self.message)
 
 class NoCoinsWithThisValueException(Error):
     """ Exception raised if there is no more coins with given value
@@ -63,7 +63,7 @@ class NoCoinsWithThisValueException(Error):
         super().__init__(self.message)
 
     def __str__(self):
-        return "{}".format(self.value, self.message)
+        return "{}".format(self.message)
 
 class NoSpecificProductsLeftException(Error):
     """ Exception raised if there is no more products with given number
@@ -78,7 +78,7 @@ class NoSpecificProductsLeftException(Error):
         super().__init__(self.message)
 
     def __str__(self):
-        return "{}".format(self.value, self.message)
+        return "{}".format(self.message)
 
 
 class NoRestInVendingMachineException(Error):
@@ -93,4 +93,4 @@ class NoRestInVendingMachineException(Error):
         super().__init__(self.message)
 
     def __str__(self):
-        return "{}".format(self.value, self.message)
+        return "{}".format(self.message)
