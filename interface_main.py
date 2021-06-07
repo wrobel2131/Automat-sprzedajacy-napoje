@@ -2,7 +2,6 @@
 from tkinter import *
 from tkinter import font
 from PIL import Image, ImageTk
-from vending_machine_label import Vending_machine_image
 from vending_machine import Vending_Machine
 from decimal import *
 import pygame
@@ -21,6 +20,22 @@ def play_button():
     """The function responsible for playing the button click sound once, using pygame """
     pygame.mixer.music.load("sounds\\button_click.mp3")
     pygame.mixer.music.play(loops=0)
+
+class Vending_machine_image:
+    """The class represents a label with image of vending machine with drinks.
+     """
+    def __init__(self, master):
+        """ Constructs the label with image
+        Parameters
+        ----------
+            master: a window, where this whole label will be placed"""
+        self.__img = PhotoImage(file="images/maszynaFin.png")
+        self.__machine_image_label = Label(master, image=self.__img)
+        self.__machine_image_label.grid(column=0, row=0)
+
+
+
+
 
 class ButtonFrame:
     """This class represents a panel with buttons with which we enter the product number and check product price 
