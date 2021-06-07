@@ -10,8 +10,8 @@ class Vending_machine_image:
         Parameters
         ----------
             master: a window, where this whole label will be placed"""
-        self._img = PhotoImage(file="images/maszynaFin.png")
-        self._machine_image_label = Label(master, image=self._img)
-        self._machine_image_label.grid(column=0, row=0)
+        self.__img = PhotoImage(file="images/maszynaFin.png")
+        self.__machine_image_label = Label(master, image=self.__img)
+        self.__machine_image_label.grid(column=0, row=0)
 
 
