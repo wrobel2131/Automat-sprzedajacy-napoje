@@ -3,7 +3,7 @@ from vending_machine import Vending_Machine
 from decimal import *
 
 class Tests(unittest.TestCase):
-    def Product_Price_Check_Test(self):
+    def test_Product_Price_Check(self):
         """Checks if the function responsible for the return of price of the product with given number is working properly """
         #given
         vend = Vending_Machine(1)
@@ -14,7 +14,7 @@ class Tests(unittest.TestCase):
         #then
         self.assertEqual(product_price, price)
 
-    def No_Rest_Returned_when_Exact_Amount_Entered_Test(self):
+    def test_No_Rest_Returned_when_Exact_Amount_Entered(self):
         """Checks the case when the exact amount is paid. In this case, the rest should be 0"""
         #given
         vend = Vending_Machine(1)
@@ -34,7 +34,7 @@ class Tests(unittest.TestCase):
         #then
         self.assertEqual(rest, Decimal("0"))
         
-    def Correct_Rest_Returned_when_Bigger_Amount_Entered_Test(self):
+    def test_Correct_Rest_Returned_when_Bigger_Amount_Entered(self):
         """Checks the case when the bigger amount is paid. In this case, the rest should be returned and equal (sum of coins values given bu user) - (product price)"""
         #given
         vend = Vending_Machine(1)
@@ -50,7 +50,7 @@ class Tests(unittest.TestCase):
         #then
         self.assertEqual(rest, Decimal("7")-Decimal("{}".format(price)))
 
-    def No_Products_Left_Test(self):
+    def test_No_Products_Left(self):
         """Checks if there is product with given number. If not, should return False """
         #given
         vend = Vending_Machine(0)
@@ -64,7 +64,7 @@ class Tests(unittest.TestCase):
         #then
         self.assertEqual(rest, -2)
 
-    def Product_Price_Check_when_Product_Number_Incorrect_should_Return_False_Test(self):
+    def test_Product_Price_Check_when_Product_Number_Incorrect_should_Return_False(self):
         """Checks, if there is a product with given number(incorrect number). Should return False, when there is not products with such a number """
         #given
         vend = Vending_Machine(1)
@@ -75,7 +75,7 @@ class Tests(unittest.TestCase):
         #then
         self.assertFalse(check)
         
-    def Correct_Rest_Returned_when_Resign_Pay_Test(self):
+    def test_Correct_Rest_Returned_when_Resign_Pay(self):
         """Checks, if the rest is returned in the case, when user cancel the payment. The rest should be equal to coins entered by user """
         #given
         vend = Vending_Machine(1)
@@ -95,7 +95,7 @@ class Tests(unittest.TestCase):
         #then
         self.assertEqual(value_set, new_value_set)
 
-    def No_Rest_Returned_when_First_Amount_Too_Low_But_Whole_Amount_Correct_Test(self):
+    def test_No_Rest_Returned_when_First_Amount_Too_Low_But_Whole_Amount_Correct(self):
         """Checks the case, when user tries first to pay with too small amount for a product and then adds the amount to exact price of the product and pays. Rest returned should equal 0 """
         #given
         vend = Vending_Machine(1)
@@ -120,7 +120,7 @@ class Tests(unittest.TestCase):
 
         #then
         self.assertEqual(check2, Decimal("0"))
-    def Correct_Purchase_With_100_Coins_Test(self):
+    def test_Correct_Purchase_With_100_Coins(self):
         """Checks whether if we pay with 0.01 coins we will but a 1.0 value product. Rest returned for this buy should equal 0 """
         #given
         vend = Vending_Machine(1)
@@ -136,7 +136,10 @@ class Tests(unittest.TestCase):
 
         #then
         self.assertEqual(rest, Decimal("0"))
+        
     
 
 if __name__ == '__main__':
     unittest.main()
+
+
