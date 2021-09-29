@@ -1,7 +1,11 @@
 
 # 3. Automat sprzedajacy napoje 
 
-## Opis zadania
+
+![alt text](https://github.com/wrobel2131/Automat-sprzedajacy-napoje/blob/main/images/wending_machine.png?raw=true)
+
+
+## Opis projektu
 
 
 * Automat przechowuje informacje o monetach znajdujących sie w nim (1, 2, 5,
